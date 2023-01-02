@@ -7,6 +7,29 @@
 
 import Foundation
 
+/**
+ 약수의 개수와 덧셈
+ https://school.programmers.co.kr/learn/courses/30/lessons/77884
+ Lv. 1
+ */
+func solution(_ left:Int, _ right:Int) -> Int {
+  var res = 0
+  for i in left ... right {
+    print(i)
+    var isEven = false
+    if i == 1 {
+      res -= 1
+      continue
+    }
+    for j in 1 ..< i {
+      if j * j == i {
+        isEven = true
+      }
+    }
+    res += isEven ? -i : i
+  }
+  return res
+}
 
 /**
  부족한 금액 계산하기
