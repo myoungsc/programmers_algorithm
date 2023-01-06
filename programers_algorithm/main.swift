@@ -7,6 +7,27 @@
 
 import Foundation
 
+/**
+ 가장 가까운 같은 글자
+ https://school.programmers.co.kr/learn/courses/30/lessons/142086
+ Lv. 1
+ */
+/*
+func solution(_ s:String) -> [Int] {
+  var res: [Int] = []
+  var dicIndex: [String: Int] = [:]
+  for (i, str) in s.map({ String($0) }).enumerated() {
+    if let index = dicIndex[str] {
+      res.append(i-index)
+    } else {
+      res.append(-1)
+    }
+    dicIndex[str] = i
+  }
+  return res
+}
+*/
+
 /*
  문자열 내 마음대로 정렬하기
  https://school.programmers.co.kr/learn/courses/30/lessons/12915
