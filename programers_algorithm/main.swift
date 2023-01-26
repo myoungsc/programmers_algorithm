@@ -8,6 +8,28 @@
 import Foundation
 
 /**
+ 크기가 작은 부분 문자열
+ https://school.programmers.co.kr/learn/courses/30/lessons/147355
+ Lv1
+ */
+/*
+func solution(_ t:String, _ p:String) -> Int {
+  let count = p.count
+  var res = 0
+  for i in stride(from: 0, to: t.count-count+1, by: 1) {
+    let startIndex = t.index(t.startIndex, offsetBy: i)// 사용자지정 시작인덱스
+    let endIndex = t.index(t.startIndex, offsetBy: i+count-1)
+    if let value = Int(String(t[startIndex ... endIndex])),
+       let pInt = Int(p),
+        value <= pInt {
+      res += 1
+    }
+  }
+  return res
+}
+*/
+
+/**
  가장 가까운 같은 글자
  https://school.programmers.co.kr/learn/courses/30/lessons/142086
  Lv. 1
