@@ -8,6 +8,45 @@
 import Foundation
 
 /**
+ 성격 유형 검사하기
+ https://school.programmers.co.kr/learn/courses/30/lessons/118666
+ Lv. 1
+ */
+/*
+ func solution(_ survey:[String], _ choices:[Int]) -> String {
+   var indicator: [String : Int] = ["R": 0, "T": 0, "C": 0, "F": 0, "J": 0, "M": 0, "A": 0, "N": 0]
+   
+   for i in 0 ..< survey.count {
+     let score = choices[i]
+     let strs = survey[i].map{ String($0) }
+     if score == 4 { continue }
+     if score < 4 {
+       if let value = indicator[strs[0]] {
+         indicator[strs[0]] = value + (4-score)
+       }
+     } else {
+       if let value = indicator[strs[1]] {
+         indicator[strs[1]] = value + (score-4)
+       }
+     }
+   }
+   
+   let keys = "RTCFJMAN".map{ String($0) }
+   var res = ""
+   for i in stride(from: 0, to: keys.count, by: 2) {
+     if let a = indicator[keys[i]], let b = indicator[keys[i+1]] {
+       if a == b {
+         res += keys[i] < keys[i+1] ? keys[i] : keys[i+1]
+       } else {
+         res += a > b ? keys[i] : keys[i+1]
+       }
+     }
+   }
+   return res
+ }
+ */
+
+/**
  크기가 작은 부분 문자열
  https://school.programmers.co.kr/learn/courses/30/lessons/147355
  Lv1
