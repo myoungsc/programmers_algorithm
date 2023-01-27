@@ -8,6 +8,44 @@
 import Foundation
 
 /**
+ 개인정보 수집 유효기간
+ https://school.programmers.co.kr/learn/courses/30/lessons/150370
+ Lv.1
+ */
+/*
+ func solution(_ today:String, _ terms:[String], _ privacies:[String]) -> [Int] {
+   let todayToInt = today.split{ $0 == "." }.compactMap{ Int($0) }
+   
+   var termDic: [String: Int] = [:]
+   for term in terms {
+     let temp = term.split{ $0 == " " }.compactMap{ String($0) }
+     if let termMonth = Int(temp[1]) {
+       termDic[temp[0]] = termMonth
+     }
+   }
+   
+   let todayA = todayToInt[0] * 12 * 28 + todayToInt[1] * 28 + todayToInt[2]
+   
+   var res: [Int] = []
+   for (i, privacy) in privacies.enumerated() {
+     let splitText = privacy.split{ $0 == " " }.map{ String($0) }
+     let key = splitText[1]
+
+     let calDay = splitText[0].split{ $0 == "." }.compactMap{ Int($0) }
+     guard let month = termDic[key] else { continue }
+
+     let calDayA = calDay[0] * 12 * 28 + (calDay[1] + month) * 28 + calDay[2]
+         
+     if todayA >= calDayA {
+       res.append(i+1)
+     }
+   }
+   return res
+ }
+ */
+
+
+/**
  성격 유형 검사하기
  https://school.programmers.co.kr/learn/courses/30/lessons/118666
  Lv. 1
