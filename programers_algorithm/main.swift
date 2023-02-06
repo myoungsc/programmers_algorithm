@@ -8,6 +8,26 @@
 import Foundation
 
 /**
+ 둘만의 암호
+ https://school.programmers.co.kr/learn/courses/30/lessons/155652
+ Lv.1
+ */
+/*
+ func solution(_ s:String, _ skip:String, _ index:Int) -> String {
+   var alpbet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+   let skipArr = skip.map{ String($0) }
+   alpbet = alpbet.filter{ !skipArr.contains($0) }
+   var res: String = ""
+   for str in s {
+     if let i = alpbet.firstIndex(of: String(str)) {
+       res += alpbet[(i + index) % alpbet.count]
+     }
+   }
+   return res
+ }
+ */
+
+/**
  개인정보 수집 유효기간
  https://school.programmers.co.kr/learn/courses/30/lessons/150370
  Lv.1
