@@ -8,6 +8,31 @@
 import Foundation
 
 /**
+ JadenCase 문자열 만들기
+ https://school.programmers.co.kr/learn/courses/30/lessons/12951
+ Lv.2
+ */
+/*
+ func solution(_ s:String) -> String {
+   var arr = s.lowercased().map{ String($0)}
+   
+   var before = " "
+   for (i, value) in arr.enumerated() {
+     if before == " " && value != " " {
+       if let ascii = value.first?.asciiValue {
+         if ascii >= 97 && ascii <= 122 {
+           let tempStr = String(UnicodeScalar(ascii-32))
+           arr[i] = tempStr
+         }
+       }
+     }
+     before = value
+   }
+   return arr.joined()
+ }
+ */
+
+/**
  둘만의 암호
  https://school.programmers.co.kr/learn/courses/30/lessons/155652
  Lv.1
