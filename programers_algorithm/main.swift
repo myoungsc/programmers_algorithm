@@ -8,6 +8,67 @@
 import Foundation
 
 /**
+ https://school.programmers.co.kr/learn/courses/30/lessons/12981
+ 영어 끝말잇기
+ Lv.2
+ */
+/*
+ func solution(_ n:Int, _ words:[String]) -> [Int] {
+   var people: Int = 1
+   var wordIndex: Int = 1
+   var alreadyWord: [String] = [words[0]]
+     
+   for i in 1 ..< words.count {
+     let beforeChar = words[i-1].last
+     let afterChar = words[i].first
+     
+     if words[i].count == 1 {
+       wordIndex = i/n
+       break
+     }
+     
+     if beforeChar == afterChar {
+       if alreadyWord.contains(words[i]) {
+         wordIndex = i/n
+         break
+       }
+       people += 1
+       alreadyWord.append(words[i])
+     } else {
+       wordIndex = i/n
+       break
+     }
+   }
+   if words.count == alreadyWord.count {
+     return [0, 0]
+   }
+   people = people % n
+   return [people+1, wordIndex+1]
+ }
+ */
+/**
+ 짝지어 제거하기
+ https://school.programmers.co.kr/learn/courses/30/lessons/12973
+ Lv.2
+ */
+/*
+ func solution(_ s:String) -> Int{
+   let arr = s.map{ String($0) }
+   var stackArr: [String] = [arr[0]]
+   for i in 1 ..< arr.count {
+     if stackArr.count == 0 {
+       stackArr.append(arr[i])
+     } else if stackArr[stackArr.count-1] == arr[i] {
+       let _ = stackArr.popLast()
+     } else {
+       stackArr.append(arr[i])
+     }
+   }
+   return stackArr.count == 0 ? 1 : 0
+ }
+ */
+
+/**
  JadenCase 문자열 만들기
  https://school.programmers.co.kr/learn/courses/30/lessons/12951
  Lv.2
