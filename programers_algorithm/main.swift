@@ -8,8 +8,32 @@
 import Foundation
 
 /**
- https://school.programmers.co.kr/learn/courses/30/lessons/12981
+ N개의 최소공배수
+ https://school.programmers.co.kr/learn/courses/30/lessons/12953
+ Lv.2
+ */
+/*
+ func solution(_ arr:[Int]) -> Int {
+   return arr.reduce(1) { lcm($0, $1) }
+ }
+
+ func gcd(_ a: Int, _ b: Int) -> Int {
+   let r = a % b
+   if r != 0 {
+     return gcd(b, r)
+   } else {
+     return b
+   }
+ }
+
+ func lcm(_ m: Int, _ n: Int) -> Int {
+   return m / gcd(m, n) * n
+ }
+ */
+
+/**
  영어 끝말잇기
+ https://school.programmers.co.kr/learn/courses/30/lessons/12981
  Lv.2
  */
 /*
