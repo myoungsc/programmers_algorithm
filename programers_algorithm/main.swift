@@ -7,6 +7,31 @@
 
 import Foundation
 
+
+/**
+ 최소 직사각형
+ https://school.programmers.co.kr/learn/courses/30/lessons/86491
+ Lv.1
+ */
+/*
+ func solution(_ sizes:[[Int]]) -> Int {
+   var maxWidth: Int = 0
+   var maxHeight: Int = 0
+   for size in sizes {
+     if let max = size.max(), let min = size.min() {
+       if maxWidth < max {
+         maxWidth = max
+       }
+       if maxHeight < min {
+         maxHeight = min
+       }
+     }
+   }
+   return maxWidth * maxHeight
+ }
+ */
+
+
 /**
  N개의 최소공배수
  https://school.programmers.co.kr/learn/courses/30/lessons/12953
