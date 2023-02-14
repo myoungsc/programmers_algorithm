@@ -7,6 +7,20 @@
 
 import Foundation
 
+/**
+ 로또의 최고 순위와 최저 순위
+ https://school.programmers.co.kr/learn/courses/30/lessons/77484
+ Lv.1
+ */
+/*
+ import Foundation
+
+ func solution(_ lottos:[Int], _ win_nums:[Int]) -> [Int] {
+   let zeroCount = lottos.filter{ $0 == 0 }.count
+   let winCount = win_nums.filter{ lottos.contains($0) }.count
+   return [min(7-zeroCount-winCount, 6), min(7-winCount, 6)]
+ }
+ */
 
 /**
  최소 직사각형
