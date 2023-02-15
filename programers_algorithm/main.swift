@@ -8,6 +8,42 @@
 import Foundation
 
 /**
+ 연속 부분 수열 합의 개수
+ https://school.programmers.co.kr/learn/courses/30/lessons/131701
+ Lv.2
+ */
+/*
+ func solution(_ elements:[Int]) -> Int {
+   var res: Set<Int> = []
+   for i in 0 ..< elements.count {
+     res = sumArr(res, elements, i)
+   }
+   return res.count
+ }
+
+ func sumArr(_ res: Set<Int>, _ arr: [Int], _ index: Int) -> Set<Int> {
+   var temp: Set<Int> = res
+   var tempArr = arr
+   
+   for i in 0 ..< index {
+     tempArr.append(arr[i])
+   }
+  
+   for i in 0 ..< tempArr.count-index {
+     var sum = 0
+     for j in i ..< i + index + 1 {
+       sum += tempArr[j]
+     }
+     if temp.contains(sum) {
+       continue
+     }
+     temp.insert(sum)
+   }
+   return temp
+ } 
+ */
+
+/**
  로또의 최고 순위와 최저 순위
  https://school.programmers.co.kr/learn/courses/30/lessons/77484
  Lv.1
