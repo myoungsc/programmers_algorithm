@@ -8,6 +8,40 @@
 import Foundation
 
 /**
+ 숫자 짝궁
+ https://school.programmers.co.kr/learn/courses/30/lessons/131128
+ Lv.1
+ */
+/*
+ func solution(_ X:String, _ Y:String) -> String {
+   var arrX = X.map{ String($0) }
+   var arrY = Y.map{ String($0) }
+   
+   var res: String = ""
+   
+   for i in (0 ..< 10).reversed() {
+     
+     let beforeArrX = arrX.count
+     let beforeArrY = arrY.count
+     
+     arrX = arrX.filter{ $0 != "\(i)" }
+     arrY = arrY.filter{ $0 != "\(i)" }
+     
+     if beforeArrX-arrX.count == 0 || beforeArrY-arrY.count == 0 {
+       continue
+     }
+     
+     let minValue = min(beforeArrX-arrX.count, beforeArrY-arrY.count)
+     res += String(repeating: "\(i)", count: minValue)
+   }
+   
+   if res == "" { return "-1" }
+   let count = res.filter{ $0 != "0" }.count
+   return count == 0 ? "0" : res
+ }
+ */
+
+/**
  연속 부분 수열 합의 개수
  https://school.programmers.co.kr/learn/courses/30/lessons/131701
  Lv.2
